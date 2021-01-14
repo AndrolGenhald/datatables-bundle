@@ -18,6 +18,8 @@ use Symfony\Component\HttpFoundation\ParameterBag;
 /**
  * DataTableState.
  *
+ * @psalm-type SearchColumn=array{column: AbstractColumn, search: string, regex: bool}
+ *
  * @author Robbert Beesems <robbert.beesems@omines.com>
  */
 class DataTableState
@@ -37,7 +39,11 @@ class DataTableState
     /** @var string */
     private $globalSearch = '';
 
-    /** @var array */
+    /**
+     * @psalm-var array<string, SearchColumn>
+     *
+     * @var array
+     */
     private $searchColumns = [];
 
     /** @var array */
@@ -213,6 +219,8 @@ class DataTableState
 
     /**
      * Returns an array of column-level searches.
+     *
+     * @psalm-return array<string, SearchColumn>
      */
     public function getSearchColumns(): array
     {

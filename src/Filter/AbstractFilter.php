@@ -16,16 +16,26 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 
 abstract class AbstractFilter
 {
-    /** @var string */
+    /**
+     * @psalm-suppress PropertyNotSetInConstructor
+     *
+     * @var string
+     */
     protected $template_html;
 
-    /** @var string */
-    protected $template_js;
-
-    /** @var string */
+    /**
+     * @psalm-suppress PropertyNotSetInConstructor
+     *
+     * @var string
+     */
     protected $operator;
 
-    public function set(array $options)
+    public function __construct(?array $options = null)
+    {
+        $this->set($options ?? []);
+    }
+
+    final public function set(array $options)
     {
         $resolver = new OptionsResolver();
         $this->configureOptions($resolver);
@@ -42,7 +52,6 @@ abstract class AbstractFilter
     {
         $resolver->setDefaults([
             'template_html' => null,
-            'template_js' => null,
             'operator' => 'CONTAINS',
         ]);
 
@@ -60,21 +69,13 @@ abstract class AbstractFilter
     /**
      * @return string
      */
-    public function getTemplateJs()
-    {
-        return $this->template_js;
-    }
-
-    /**
-     * @return string
-     */
     public function getOperator()
     {
         return $this->operator;
     }
 
-    /**
-     * @param mixed $value
-     */
-    abstract public function isValidValue($value): bool;
+    public function getValue(string $value): ?string
+    {
+        return $value;
+    }
 }

@@ -62,6 +62,21 @@
                                 var api = new $.fn.dataTable.Api( settings );
                                 var merged = $.extend(true, {}, api.state(), state);
 
+                                $(api.table().node()).find('thead > tr.datatable-filters, tfoot > tr.datatable-filters').find(':input[data-search-column-index]').each(function () {
+                                    let searchVal = merged.columns[$(this).data('search-column-index')].search.search;
+                                    if (this.nodeName === 'SELECT' && this.multiple) {
+                                        searchVal = searchVal.split(',');
+                                    }
+                                    $(this).val(searchVal);
+                                })
+
+                                for (let colIndex in merged.columns) {
+                                    let search = merged.columns[colIndex].search.search;
+                                    if (search !== '') {
+                                        api.column(colIndex).search(search);
+                                    }
+                                }
+
                                 api
                                     .order(merged.order)
                                     .search(merged.search.search)
@@ -86,7 +101,16 @@
                 }
 
                 root.html(data.template);
-                dt = $('table', root).DataTable(dtOpts);
+                let dt = $('table', root).DataTable(dtOpts);
+                dt.on('init.dt', function(event, settings) {
+                    let domTable = dt.table().node();
+                    let filterRows = $(domTable).find('thead > tr.datatable-filters, tfoot > tr.datatable-filters');
+                    filterRows.find(':input[data-search-column-index]').on('change', function(event) {
+                        let column = dt.columns($(this).data('search-column-index'));
+                        column.search($(this).val());
+                        column.draw();
+                    });
+                });
                 if (config.state !== 'none') {
                     dt.on('draw.dt', function(e) {
                         var data = $.param(dt.state()).split('&');
