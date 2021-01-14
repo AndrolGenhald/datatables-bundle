@@ -1,0 +1,715 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<files psalm-version="4.4.0@ef4afd72bca50a0aff61599d3e433c9ee64287ac">
+  <file src="src/Adapter/AbstractAdapter.php">
+    <MissingReturnType occurrences="1">
+      <code>prepareQuery</code>
+    </MissingReturnType>
+    <MixedArgument occurrences="5">
+      <code>$mapping</code>
+      <code>$mapping</code>
+      <code>$result</code>
+      <code>$result</code>
+      <code>$result</code>
+    </MixedArgument>
+    <MixedArrayAccess occurrences="2">
+      <code>$column</code>
+      <code>$mapping</code>
+    </MixedArrayAccess>
+    <MixedAssignment occurrences="7">
+      <code>$result</code>
+      <code>$row</code>
+      <code>$row[$column-&gt;getName()]</code>
+      <code>$row['DT_RowId']</code>
+      <code>$rows[]</code>
+      <code>$value</code>
+      <code>list($column, $mapping)</code>
+    </MixedAssignment>
+  </file>
+  <file src="src/Adapter/AdapterInterface.php">
+    <MissingReturnType occurrences="1">
+      <code>configure</code>
+    </MissingReturnType>
+  </file>
+  <file src="src/Adapter/AdapterQuery.php">
+    <MissingParamType occurrences="1">
+      <code>$value</code>
+    </MissingParamType>
+    <MissingReturnType occurrences="1">
+      <code>set</code>
+    </MissingReturnType>
+    <PropertyNotSetInConstructor occurrences="1">
+      <code>$data</code>
+    </PropertyNotSetInConstructor>
+  </file>
+  <file src="src/Adapter/ArrayAdapter.php">
+    <MissingClosureParamType occurrences="2">
+      <code>$a</code>
+      <code>$b</code>
+    </MissingClosureParamType>
+    <MissingConstructor occurrences="1">
+      <code>$accessor</code>
+    </MissingConstructor>
+    <MissingReturnType occurrences="1">
+      <code>configure</code>
+    </MissingReturnType>
+    <MixedArgument occurrences="5">
+      <code>$propertyPath</code>
+      <code>$propertyPath</code>
+      <code>$result</code>
+      <code>$state-&gt;getOrderBy()[0][1]</code>
+      <code>$value</code>
+    </MixedArgument>
+    <MixedArrayAccess occurrences="6">
+      <code>$a[$oc]</code>
+      <code>$a[$oc]</code>
+      <code>$b[$oc]</code>
+      <code>$b[$oc]</code>
+      <code>$state-&gt;getOrderBy()[0][0]</code>
+      <code>$state-&gt;getOrderBy()[0][1]</code>
+    </MixedArrayAccess>
+    <MixedArrayOffset occurrences="4">
+      <code>$a[$oc]</code>
+      <code>$a[$oc]</code>
+      <code>$b[$oc]</code>
+      <code>$b[$oc]</code>
+    </MixedArrayOffset>
+    <MixedAssignment occurrences="7">
+      <code>$oc</code>
+      <code>$propertyPath</code>
+      <code>$result</code>
+      <code>$row</code>
+      <code>$row[$column-&gt;getName()]</code>
+      <code>$value</code>
+      <code>$value</code>
+    </MixedAssignment>
+    <MixedMethodCall occurrences="1">
+      <code>getName</code>
+    </MixedMethodCall>
+  </file>
+  <file src="src/Adapter/Doctrine/FetchJoinORMAdapter.php">
+    <ArgumentTypeCoercion occurrences="1">
+      <code>$from_expr-&gt;getFrom()</code>
+    </ArgumentTypeCoercion>
+    <InvalidTemplateParam occurrences="1">
+      <code>$paginator-&gt;getIterator()</code>
+    </InvalidTemplateParam>
+    <MissingParamType occurrences="1">
+      <code>$identifier</code>
+    </MissingParamType>
+    <MissingPropertyType occurrences="1">
+      <code>$use_simple_total</code>
+    </MissingPropertyType>
+    <MissingReturnType occurrences="4">
+      <code>configure</code>
+      <code>configureOptions</code>
+      <code>getSimpleTotalCount</code>
+      <code>prepareQuery</code>
+    </MissingReturnType>
+    <MixedArgument occurrences="2">
+      <code>$query</code>
+      <code>$this-&gt;getSimpleTotalCount($builder)</code>
+    </MixedArgument>
+    <MixedArrayAccess occurrences="5">
+      <code>$builder-&gt;getDQLPart('from')[0]</code>
+      <code>$builder-&gt;getDQLPart('from')[0]</code>
+      <code>$column</code>
+      <code>$direction</code>
+      <code>$queryBuilder-&gt;getDQLPart('from')[0]</code>
+    </MixedArrayAccess>
+    <MixedAssignment occurrences="5">
+      <code>$builder</code>
+      <code>$query</code>
+      <code>$result</code>
+      <code>$rootAlias</code>
+      <code>list($column, $direction)</code>
+    </MixedAssignment>
+    <MixedMethodCall occurrences="5">
+      <code>addOrderBy</code>
+      <code>getAlias</code>
+      <code>getQuery</code>
+      <code>setFirstResult</code>
+      <code>setMaxResults</code>
+    </MixedMethodCall>
+    <PossiblyNullReference occurrences="3">
+      <code>addOrderBy</code>
+      <code>getQuery</code>
+      <code>setFirstResult</code>
+    </PossiblyNullReference>
+    <PropertyNotSetInConstructor occurrences="3">
+      <code>FetchJoinORMAdapter</code>
+      <code>FetchJoinORMAdapter</code>
+      <code>FetchJoinORMAdapter</code>
+    </PropertyNotSetInConstructor>
+  </file>
+  <file src="src/Adapter/Doctrine/ORM/AutomaticQueryBuilder.php">
+    <MissingParamType occurrences="2">
+      <code>$columnTableName</code>
+      <code>$data</code>
+    </MissingParamType>
+    <MissingReturnType occurrences="8">
+      <code>addSelectColumn</code>
+      <code>addSelectColumns</code>
+      <code>getIdentifier</code>
+      <code>process</code>
+      <code>processColumn</code>
+      <code>setIdentifierFromAssociation</code>
+      <code>setJoins</code>
+      <code>setSelectFrom</code>
+    </MissingReturnType>
+    <MixedArgument occurrences="4">
+      <code>$metadata</code>
+      <code>$metadata</code>
+      <code>$this-&gt;selectColumns[$columnTableName]</code>
+      <code>$value</code>
+    </MixedArgument>
+    <MixedArrayAccess occurrences="2">
+      <code>$value['alias']</code>
+      <code>$value['type']</code>
+    </MixedArrayAccess>
+    <MixedArrayAssignment occurrences="2">
+      <code>$this-&gt;selectColumns[$columnTableName][]</code>
+      <code>$this-&gt;selectColumns[$columnTableName][]</code>
+    </MixedArrayAssignment>
+    <MixedArrayOffset occurrences="3">
+      <code>$this-&gt;selectColumns[$columnTableName]</code>
+      <code>$this-&gt;selectColumns[$columnTableName]</code>
+      <code>$this-&gt;selectColumns[$columnTableName]</code>
+    </MixedArrayOffset>
+    <MixedAssignment occurrences="3">
+      <code>$metadata</code>
+      <code>$value</code>
+      <code>$value</code>
+    </MixedAssignment>
+    <ParamNameMismatch occurrences="1">
+      <code>$builder</code>
+    </ParamNameMismatch>
+  </file>
+  <file src="src/Adapter/Doctrine/ORM/QueryBuilderProcessorInterface.php">
+    <MissingReturnType occurrences="1">
+      <code>process</code>
+    </MissingReturnType>
+  </file>
+  <file src="src/Adapter/Doctrine/ORM/SearchCriteriaProvider.php">
+    <MissingReturnType occurrences="3">
+      <code>process</code>
+      <code>processGlobalSearch</code>
+      <code>processSearchColumns</code>
+    </MissingReturnType>
+    <RedundantConditionGivenDocblockType occurrences="1">
+      <code>null !== ($filter = $column-&gt;getFilter())</code>
+    </RedundantConditionGivenDocblockType>
+  </file>
+  <file src="src/Adapter/Doctrine/ORMAdapter.php">
+    <ArgumentTypeCoercion occurrences="2">
+      <code>$this-&gt;manager</code>
+      <code>$this-&gt;metadata</code>
+    </ArgumentTypeCoercion>
+    <DeprecatedClass occurrences="1">
+      <code>$query-&gt;iterate([], $this-&gt;hydrationMode)</code>
+    </DeprecatedClass>
+    <MissingClosureParamType occurrences="1">
+      <code>$value</code>
+    </MissingClosureParamType>
+    <MissingClosureReturnType occurrences="1">
+      <code>function (Options $options, $value) {</code>
+    </MissingClosureReturnType>
+    <MissingParamType occurrences="2">
+      <code>$identifier</code>
+      <code>$identifier</code>
+    </MissingParamType>
+    <MissingReturnType occurrences="6">
+      <code>addCriteriaProcessor</code>
+      <code>buildCriteria</code>
+      <code>configure</code>
+      <code>configureOptions</code>
+      <code>prepareQuery</code>
+      <code>process</code>
+    </MissingReturnType>
+    <MixedArgument occurrences="11">
+      <code>$current</code>
+      <code>$direction</code>
+      <code>$gb</code>
+      <code>$mapping['targetEntity']</code>
+      <code>$options['entity']</code>
+      <code>$options['entity']</code>
+      <code>$options['entity']</code>
+      <code>$processor</code>
+      <code>$query-&gt;get('aliases')</code>
+      <code>$result</code>
+      <code>(array) $value</code>
+    </MixedArgument>
+    <MixedArrayAccess occurrences="7">
+      <code>$aliases[$origin][0]</code>
+      <code>$aliases[$origin][0]</code>
+      <code>$builder-&gt;getDQLPart('from')[0]</code>
+      <code>$builder-&gt;getDQLPart('from')[0]</code>
+      <code>$column</code>
+      <code>$direction</code>
+      <code>$mapping['targetEntity']</code>
+    </MixedArrayAccess>
+    <MixedAssignment occurrences="11">
+      <code>$current</code>
+      <code>$current</code>
+      <code>$gb</code>
+      <code>$joins</code>
+      <code>$mapping</code>
+      <code>$result</code>
+      <code>$rootAlias</code>
+      <code>$this-&gt;criteriaProcessors</code>
+      <code>$this-&gt;hydrationMode</code>
+      <code>$this-&gt;queryBuilderProcessors</code>
+      <code>list($column, $direction)</code>
+    </MixedAssignment>
+    <MixedMethodCall occurrences="1">
+      <code>getAlias</code>
+    </MixedMethodCall>
+    <PossiblyNullArgument occurrences="3">
+      <code>$column-&gt;getField()</code>
+      <code>$column-&gt;getOrderField()</code>
+      <code>$query-&gt;get('aliases')</code>
+    </PossiblyNullArgument>
+    <PropertyNotSetInConstructor occurrences="5">
+      <code>$criteriaProcessors</code>
+      <code>$hydrationMode</code>
+      <code>$manager</code>
+      <code>$metadata</code>
+      <code>$queryBuilderProcessors</code>
+    </PropertyNotSetInConstructor>
+    <PropertyTypeCoercion occurrences="2">
+      <code>$this-&gt;manager-&gt;getClassMetadata($options['entity'])</code>
+      <code>$this-&gt;registry-&gt;getManagerForClass($options['entity'])</code>
+    </PropertyTypeCoercion>
+    <RedundantConditionGivenDocblockType occurrences="1">
+      <code>is_callable($provider)</code>
+    </RedundantConditionGivenDocblockType>
+    <UndefinedInterfaceMethod occurrences="1">
+      <code>getAssociationMapping</code>
+    </UndefinedInterfaceMethod>
+  </file>
+  <file src="src/Adapter/Elasticsearch/ElasticaAdapter.php">
+    <MissingReturnType occurrences="4">
+      <code>applyOrdering</code>
+      <code>configure</code>
+      <code>configureOptions</code>
+      <code>prepareQuery</code>
+    </MissingReturnType>
+    <MixedArgument occurrences="1">
+      <code>$query-&gt;get('client')</code>
+    </MixedArgument>
+    <MixedArrayAccess occurrences="2">
+      <code>$column</code>
+      <code>$direction</code>
+    </MixedArrayAccess>
+    <MixedAssignment occurrences="2">
+      <code>$this-&gt;clientSettings</code>
+      <code>list($column, $direction)</code>
+    </MixedAssignment>
+    <PossiblyInvalidArgument occurrences="1">
+      <code>$search-&gt;count()</code>
+    </PossiblyInvalidArgument>
+    <PossiblyNullArgument occurrences="1">
+      <code>$query-&gt;get('client')</code>
+    </PossiblyNullArgument>
+  </file>
+  <file src="src/Adapter/MongoDB/MongoDBAdapter.php">
+    <DeprecatedMethod occurrences="2">
+      <code>count</code>
+      <code>count</code>
+    </DeprecatedMethod>
+    <InvalidArrayOffset occurrences="1">
+      <code>[$column-&gt;getField() =&gt; new \MongoDB\BSON\Regex($globalSearch, 'i')]</code>
+    </InvalidArrayOffset>
+    <MissingReturnType occurrences="3">
+      <code>configure</code>
+      <code>configureOptions</code>
+      <code>prepareQuery</code>
+    </MissingReturnType>
+    <MixedArrayAccess occurrences="3">
+      <code>$column</code>
+      <code>$direction</code>
+      <code>self::SORT_MAP[$direction]</code>
+    </MixedArrayAccess>
+    <MixedArrayOffset occurrences="1">
+      <code>self::SORT_MAP[$direction]</code>
+    </MixedArrayOffset>
+    <MixedAssignment occurrences="4">
+      <code>$options['sort'][$orderField]</code>
+      <code>$this-&gt;collection</code>
+      <code>$this-&gt;filters</code>
+      <code>list($column, $direction)</code>
+    </MixedAssignment>
+    <PossiblyNullArgument occurrences="1">
+      <code>$column-&gt;getField()</code>
+    </PossiblyNullArgument>
+    <PropertyNotSetInConstructor occurrences="2">
+      <code>$collection</code>
+      <code>$filters</code>
+    </PropertyNotSetInConstructor>
+    <UndefinedClass occurrences="2">
+      <code>$cursor</code>
+      <code>\MongoDB\BSON\Regex</code>
+    </UndefinedClass>
+    <UndefinedDocblockClass occurrences="2">
+      <code>$cursor</code>
+      <code>$this-&gt;collection-&gt;find($filter, $options)</code>
+    </UndefinedDocblockClass>
+  </file>
+  <file src="src/Column/AbstractColumn.php">
+    <MissingConstructor occurrences="5">
+      <code>$options</code>
+      <code>$options</code>
+      <code>$options</code>
+      <code>$options</code>
+      <code>$options</code>
+    </MissingConstructor>
+    <MissingParamType occurrences="1">
+      <code>$value</code>
+    </MissingParamType>
+    <MissingReturnType occurrences="1">
+      <code>initialize</code>
+    </MissingReturnType>
+    <MixedArgument occurrences="1">
+      <code>$value</code>
+    </MixedArgument>
+    <MixedAssignment occurrences="6">
+      <code>$leftExpr</code>
+      <code>$leftExpr</code>
+      <code>$render</code>
+      <code>$rightExpr</code>
+      <code>$value</code>
+      <code>$value</code>
+    </MixedAssignment>
+    <MixedInferredReturnType occurrences="13">
+      <code>AbstractFilter</code>
+      <code>bool</code>
+      <code>bool</code>
+      <code>bool</code>
+      <code>bool</code>
+      <code>callable|string|null</code>
+      <code>string</code>
+      <code>string</code>
+      <code>string</code>
+      <code>string|null</code>
+      <code>string|null</code>
+      <code>string|null</code>
+      <code>string|null</code>
+    </MixedInferredReturnType>
+    <MixedPropertyTypeCoercion occurrences="1">
+      <code>self::$resolversByClass[$class]-&gt;resolve($options)</code>
+    </MixedPropertyTypeCoercion>
+    <MixedReturnStatement occurrences="13">
+      <code>$leftExpr</code>
+      <code>$this-&gt;options['className']</code>
+      <code>$this-&gt;options['data']</code>
+      <code>$this-&gt;options['field']</code>
+      <code>$this-&gt;options['filter']</code>
+      <code>$this-&gt;options['globalSearchable'] ?? $this-&gt;isSearchable()</code>
+      <code>$this-&gt;options['label'] ?? "{$this-&gt;dataTable-&gt;getName()}.columns.{$this-&gt;getName()}"</code>
+      <code>$this-&gt;options['operator']</code>
+      <code>$this-&gt;options['orderField'] ?? $this-&gt;getField()</code>
+      <code>$this-&gt;options['orderable'] ?? !empty($this-&gt;getOrderField())</code>
+      <code>$this-&gt;options['propertyPath']</code>
+      <code>$this-&gt;options['searchable'] ?? !empty($this-&gt;getField())</code>
+      <code>$this-&gt;options['visible']</code>
+    </MixedReturnStatement>
+  </file>
+  <file src="src/Column/BoolColumn.php">
+    <MissingClosureParamType occurrences="1">
+      <code>$value</code>
+    </MissingClosureParamType>
+    <MixedArgument occurrences="1">
+      <code>$value</code>
+    </MixedArgument>
+    <MixedInferredReturnType occurrences="3">
+      <code>string</code>
+      <code>string</code>
+      <code>string</code>
+    </MixedInferredReturnType>
+    <MixedReturnStatement occurrences="3">
+      <code>$this-&gt;options['falseValue']</code>
+      <code>$this-&gt;options['nullValue']</code>
+      <code>$this-&gt;options['trueValue']</code>
+    </MixedReturnStatement>
+  </file>
+  <file src="src/Column/DateTimeColumn.php">
+    <MixedArgument occurrences="2">
+      <code>$this-&gt;options['createFromFormat']</code>
+      <code>$this-&gt;options['format']</code>
+    </MixedArgument>
+  </file>
+  <file src="src/Column/MapColumn.php">
+    <MixedArrayOffset occurrences="1">
+      <code>$this-&gt;options['map'][$value]</code>
+    </MixedArrayOffset>
+  </file>
+  <file src="src/Column/NumberColumn.php">
+    <MixedInferredReturnType occurrences="1">
+      <code>bool</code>
+    </MixedInferredReturnType>
+    <MixedReturnStatement occurrences="1">
+      <code>$this-&gt;options['raw']</code>
+    </MixedReturnStatement>
+  </file>
+  <file src="src/Column/TextColumn.php">
+    <MissingClosureParamType occurrences="1">
+      <code>$value</code>
+    </MissingClosureParamType>
+    <MixedInferredReturnType occurrences="1">
+      <code>bool</code>
+    </MixedInferredReturnType>
+    <MixedOperand occurrences="1">
+      <code>$value</code>
+    </MixedOperand>
+    <MixedReturnStatement occurrences="1">
+      <code>$this-&gt;options['raw']</code>
+    </MixedReturnStatement>
+  </file>
+  <file src="src/Column/TwigColumn.php">
+    <MixedInferredReturnType occurrences="1">
+      <code>string</code>
+    </MixedInferredReturnType>
+    <MixedReturnStatement occurrences="1">
+      <code>$this-&gt;options['template']</code>
+    </MixedReturnStatement>
+    <PossiblyNullPropertyAssignmentValue occurrences="1">
+      <code>$twig</code>
+    </PossiblyNullPropertyAssignmentValue>
+    <PropertyNotSetInConstructor occurrences="1">
+      <code>TwigColumn</code>
+    </PropertyNotSetInConstructor>
+  </file>
+  <file src="src/Column/TwigStringColumn.php">
+    <PropertyNotSetInConstructor occurrences="1">
+      <code>TwigStringColumn</code>
+    </PropertyNotSetInConstructor>
+  </file>
+  <file src="src/DataTable.php">
+    <DocblockTypeContradiction occurrences="4">
+      <code>null === $this-&gt;adapter</code>
+      <code>null === $this-&gt;state</code>
+      <code>null === $this-&gt;state</code>
+      <code>null === $this-&gt;state</code>
+    </DocblockTypeContradiction>
+    <LessSpecificReturnStatement occurrences="1">
+      <code>$this-&gt;setAdapter($this-&gt;instantiator-&gt;getAdapter($adapter), $options)</code>
+    </LessSpecificReturnStatement>
+    <MissingParamType occurrences="1">
+      <code>$name</code>
+    </MissingParamType>
+    <MixedArrayAssignment occurrences="1">
+      <code>$this-&gt;options['order'][]</code>
+    </MixedArrayAssignment>
+    <MixedArrayOffset occurrences="1">
+      <code>$this-&gt;options[$name]</code>
+    </MixedArrayOffset>
+    <MoreSpecificReturnType occurrences="1">
+      <code>$this</code>
+    </MoreSpecificReturnType>
+    <PropertyNotSetInConstructor occurrences="4">
+      <code>$adapter</code>
+      <code>$renderer</code>
+      <code>$state</code>
+      <code>$transformer</code>
+    </PropertyNotSetInConstructor>
+    <RedundantCastGivenDocblockType occurrences="1">
+      <code>(string) $column</code>
+    </RedundantCastGivenDocblockType>
+    <RedundantConditionGivenDocblockType occurrences="2">
+      <code>$this-&gt;state-&gt;isCallback()</code>
+      <code>null !== $this-&gt;state-&gt;getExporterName()</code>
+    </RedundantConditionGivenDocblockType>
+  </file>
+  <file src="src/DataTableFactory.php">
+    <MixedArgument occurrences="7">
+      <code>$config['language_from_cdn'] ?? true</code>
+      <code>$config['method'] ?? Request::METHOD_POST</code>
+      <code>$config['options'] ?? []</code>
+      <code>$config['persist_state'] ?? 'fragment'</code>
+      <code>$config['template'] ?? DataTable::DEFAULT_TEMPLATE</code>
+      <code>$config['template_parameters'] ?? []</code>
+      <code>$config['translation_domain'] ?? 'messages'</code>
+    </MixedArgument>
+  </file>
+  <file src="src/DataTableState.php">
+    <MissingReturnType occurrences="3">
+      <code>applyParameters</code>
+      <code>handleOrderBy</code>
+      <code>handleSearch</code>
+    </MissingReturnType>
+    <MixedArgument occurrences="3">
+      <code>$order['dir'] ?? DataTable::SORT_ASCENDING</code>
+      <code>$search['value'] ?? $this-&gt;globalSearch</code>
+      <code>$value</code>
+    </MixedArgument>
+    <MixedArrayAccess occurrences="3">
+      <code>$order['column']</code>
+      <code>$order['dir']</code>
+      <code>$search['search']</code>
+    </MixedArrayAccess>
+    <MixedAssignment occurrences="4">
+      <code>$order</code>
+      <code>$search</code>
+      <code>$this-&gt;exporterName</code>
+      <code>$value</code>
+    </MixedAssignment>
+    <MixedInferredReturnType occurrences="1">
+      <code>DataTableState</code>
+    </MixedInferredReturnType>
+    <PossiblyNullIterator occurrences="1">
+      <code>$dataTable-&gt;getOption('order')</code>
+    </PossiblyNullIterator>
+    <PossiblyNullPropertyAssignmentValue occurrences="1">
+      <code>null</code>
+    </PossiblyNullPropertyAssignmentValue>
+  </file>
+  <file src="src/DataTableTypeInterface.php">
+    <MissingReturnType occurrences="1">
+      <code>configure</code>
+    </MissingReturnType>
+  </file>
+  <file src="src/DataTablesBundle.php">
+    <MissingReturnType occurrences="1">
+      <code>build</code>
+    </MissingReturnType>
+  </file>
+  <file src="src/DependencyInjection/Compiler/LocatorRegistrationPass.php">
+    <MissingReturnType occurrences="1">
+      <code>process</code>
+    </MissingReturnType>
+    <MixedArgumentTypeCoercion occurrences="1">
+      <code>$serviceId</code>
+    </MixedArgumentTypeCoercion>
+    <MixedAssignment occurrences="1">
+      <code>$tag</code>
+    </MixedAssignment>
+  </file>
+  <file src="src/DependencyInjection/Configuration.php">
+    <MixedAssignment occurrences="1">
+      <code>$rootNode</code>
+    </MixedAssignment>
+  </file>
+  <file src="src/DependencyInjection/DataTablesExtension.php">
+    <MissingReturnType occurrences="1">
+      <code>load</code>
+    </MissingReturnType>
+    <MixedArgument occurrences="1">
+      <code>$config['renderer']</code>
+    </MixedArgument>
+  </file>
+  <file src="src/DependencyInjection/Instantiator.php">
+    <MixedInferredReturnType occurrences="3">
+      <code>AbstractColumn</code>
+      <code>AdapterInterface</code>
+      <code>DataTableTypeInterface</code>
+    </MixedInferredReturnType>
+    <MixedMethodCall occurrences="1">
+      <code>new $type()</code>
+    </MixedMethodCall>
+    <MixedReturnStatement occurrences="3">
+      <code>$this-&gt;getInstance($type, AbstractColumn::class)</code>
+      <code>$this-&gt;getInstance($type, AdapterInterface::class)</code>
+      <code>$this-&gt;getInstance($type, DataTableTypeInterface::class)</code>
+    </MixedReturnStatement>
+  </file>
+  <file src="src/Exporter/Csv/CsvExporter.php">
+    <MixedArgument occurrences="1">
+      <code>$row</code>
+    </MixedArgument>
+    <MixedArrayAccess occurrences="1">
+      <code>$row</code>
+    </MixedArrayAccess>
+    <MixedAssignment occurrences="1">
+      <code>$row</code>
+    </MixedAssignment>
+  </file>
+  <file src="src/Exporter/DataTableExporterCollection.php">
+    <MixedAssignment occurrences="1">
+      <code>$exporter</code>
+    </MixedAssignment>
+    <MixedInferredReturnType occurrences="1">
+      <code>DataTableExporterInterface</code>
+    </MixedInferredReturnType>
+    <MixedMethodCall occurrences="1">
+      <code>getName</code>
+    </MixedMethodCall>
+    <MixedReturnStatement occurrences="1">
+      <code>$exporter</code>
+    </MixedReturnStatement>
+  </file>
+  <file src="src/Exporter/DataTableExporterManager.php">
+    <MixedArgument occurrences="1">
+      <code>$row</code>
+    </MixedArgument>
+    <MixedAssignment occurrences="1">
+      <code>$row</code>
+    </MixedAssignment>
+    <PossiblyNullArgument occurrences="1">
+      <code>$column-&gt;getLabel()</code>
+    </PossiblyNullArgument>
+    <PossiblyNullReference occurrences="1">
+      <code>setStart</code>
+    </PossiblyNullReference>
+    <PropertyNotSetInConstructor occurrences="4">
+      <code>$dataTable</code>
+      <code>$exporterCollection</code>
+      <code>$exporterName</code>
+      <code>$translator</code>
+    </PropertyNotSetInConstructor>
+    <UndefinedClass occurrences="1">
+      <code>$this-&gt;translator</code>
+    </UndefinedClass>
+    <UndefinedDocblockClass occurrences="2">
+      <code>TranslatorInterface|LegacyTranslatorInterface</code>
+      <code>TranslatorInterface|LegacyTranslatorInterface</code>
+    </UndefinedDocblockClass>
+  </file>
+  <file src="src/Exporter/Excel/ExcelExporter.php">
+    <InvalidScalarArgument occurrences="1">
+      <code>1</code>
+    </InvalidScalarArgument>
+    <MissingReturnType occurrences="1">
+      <code>autoSizeColumnWidth</code>
+    </MissingReturnType>
+    <MixedArgument occurrences="1">
+      <code>$value</code>
+    </MixedArgument>
+    <MixedAssignment occurrences="2">
+      <code>$row</code>
+      <code>$value</code>
+    </MixedAssignment>
+  </file>
+  <file src="src/Filter/AbstractFilter.php">
+    <MissingReturnType occurrences="1">
+      <code>set</code>
+    </MissingReturnType>
+    <MixedAssignment occurrences="1">
+      <code>$value</code>
+    </MixedAssignment>
+  </file>
+  <file src="src/Twig/DataTablesExtension.php">
+    <MissingReturnType occurrences="1">
+      <code>getCDNLanguageFile</code>
+    </MissingReturnType>
+    <MixedAssignment occurrences="1">
+      <code>$cdnFile</code>
+    </MixedAssignment>
+    <MixedOperand occurrences="1">
+      <code>$cdnFile</code>
+    </MixedOperand>
+  </file>
+  <file src="src/Twig/TwigRenderer.php">
+    <InvalidPropertyAssignmentValue occurrences="1">
+      <code>$twig</code>
+    </InvalidPropertyAssignmentValue>
+    <MixedInferredReturnType occurrences="1">
+      <code>string</code>
+    </MixedInferredReturnType>
+    <MixedReturnStatement occurrences="1">
+      <code>$this-&gt;twig-&gt;render($template, $parameters)</code>
+    </MixedReturnStatement>
+    <UndefinedDocblockClass occurrences="2">
+      <code>$this-&gt;twig</code>
+      <code>Twig_Environment</code>
+    </UndefinedDocblockClass>
+  </file>
+</files>
