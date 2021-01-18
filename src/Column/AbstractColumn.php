@@ -12,6 +12,7 @@ declare(strict_types=1);
 
 namespace Omines\DataTablesBundle\Column;
 
+use Doctrine\ORM\Query\Expr\Comparison;
 use Omines\DataTablesBundle\DataTable;
 use Omines\DataTablesBundle\Filter\AbstractFilter;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -119,6 +120,7 @@ abstract class AbstractColumn
                 'leftExpr' => null,
                 'operator' => '=',
                 'rightExpr' => null,
+                'comparison' => null,
             ])
             ->setAllowedTypes('label', ['null', 'string'])
             ->setAllowedTypes('data', ['null', 'string', 'callable'])
@@ -135,6 +137,7 @@ abstract class AbstractColumn
             ->setAllowedTypes('operator', ['string'])
             ->setAllowedTypes('leftExpr', ['null', 'string', 'callable'])
             ->setAllowedTypes('rightExpr', ['null', 'string', 'callable'])
+            ->setAllowedTypes('comparison', ['null', 'callable'])
         ;
 
         return $this;
@@ -150,12 +153,9 @@ abstract class AbstractColumn
         return $this->name;
     }
 
-    /**
-     * @return string|null
-     */
-    public function getLabel()
+    public function getLabel(): ?string
     {
-        return $this->options['label'] ?? "{$this->dataTable->getName()}.columns.{$this->getName()}";
+        return $this->options['label'] ?? ucfirst($this->getName());
     }
 
     /**
@@ -219,16 +219,36 @@ abstract class AbstractColumn
     }
 
     /**
+     * Return a comparison for searching this column. Uses leftExpr, operator, and rightExpr options for backward compatibility.
+     *
+     * @return Comparison
+     */
+    public function getComparison(string $parameterName, string &$value): Comparison
+    {
+        /** @var callable|null */
+        $callback = $this->options['comparison'];
+        if (is_callable($callback)) {
+            /** @var Comparison */
+            return $callback($parameterName, $value);
+        }
+        $value = $this->getRightExpr($value);
+        return new Comparison($this->getLeftExpr(), $this->getOperator(), $parameterName);
+    }
+
+    /**
      * @return string
      */
-    public function getLeftExpr()
+    public function getLeftExpr(): string
     {
         $leftExpr = $this->options['leftExpr'];
         if (null === $leftExpr) {
-            return $this->getField();
+            $leftExpr = $this->getField();
+        } elseif (is_callable($leftExpr)) {
+            $leftExpr = call_user_func($leftExpr, $this->getField());
         }
-        if (is_callable($leftExpr)) {
-            return call_user_func($leftExpr, $this->getField());
+
+        if (null === $leftExpr) {
+            throw new \RuntimeException(sprintf('Column "%s" must have field or leftExpr set to be searchable.', $this->getName()));
         }
 
         return $leftExpr;

@@ -56,12 +56,10 @@ class FilterTest extends TestCase
         $this->assertTrue($filter->isValidValue('foo'));
 
         $filter->set([
-            'template_js' => 'foobar.js',
             'operator' => 'foo',
             'placeholder' => 'baz',
         ]);
         $this->assertSame('@DataTables/Filter/text.html.twig', $filter->getTemplateHtml());
-        $this->assertSame('foobar.js', $filter->getTemplateJs());
         $this->assertSame('foo', $filter->getOperator());
         $this->assertSame('baz', $filter->getPlaceholder());
     }
